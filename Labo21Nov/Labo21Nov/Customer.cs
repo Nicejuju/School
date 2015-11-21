@@ -29,6 +29,11 @@ namespace Labo21Nov
 
         public string Remark { get; set; }
 
+        public Customer ()
+        {
+
+        }
+
         public Customer(double aB,string aL1, string aL2, string c, string co, string eM, long id, string n, string pC, string r)
         {
             AccountBalance = aB;
