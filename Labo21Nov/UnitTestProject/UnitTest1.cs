@@ -20,12 +20,13 @@ namespace UnitTestProject
             cpyCtx.SaveChanges();
         }
 
+        [TestMethod]
         public void TestMethod2()
         {
             CompanyContext cpyCtx = new CompanyContext();
             int nbCustomers = cpyCtx.Customers.Count();
 
             Assert.AreNotEqual(0,nbCustomers);
-        }
+        }       
     }
 }

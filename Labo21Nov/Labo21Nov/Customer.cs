@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,10 @@ namespace Labo21Nov
         public string PostCode { get; set; }
 
         public string Remark { get; set; }
+
+        // Variable supplémentaire pour gérer les accès concurents
+        [Timestamp]
+        public byte[] rowVersion { get; set; }
 
         public Customer ()
         {
